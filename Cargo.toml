@@ -1,0 +1,30 @@
+[package]
+name = "imagic-lib"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+rand = "0.8.0"
+rand_pcg = "0.3.1"
+
+[dependencies.image]
+version = "0.23.14"
+default-features = false
+features = [
+    "png",
+    "jpeg",
+    "bmp",
+]
+
+
+[profile.release]
+opt-level = 3
+debug = 0
+debug-assertions = false
+overflow-checks = true
+lto = "fat"
+panic = "unwind"
+incremental = false
+codegen-units = 1
+rpath = false

@@ -1,0 +1,12 @@
+# build files
+/target
+Cargo.lock
+
+# IDE
+.idea
+*.iml
+
+# Test
+*.jpg
+*.png
+*.bmp
