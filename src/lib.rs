@@ -1,8 +1,9 @@
 mod seed;
 
+pub use image::error;
 use std::ops::Range;
 use image::{DynamicImage, GenericImageView, guess_format, ImageError, ImageFormat, Rgba};
-use image::error::{ImageFormatHint, UnsupportedError};
+use error::{ImageFormatHint, UnsupportedError};
 use rand::Rng;
 use rand_pcg::Pcg64;
 pub use seed::Seed;
